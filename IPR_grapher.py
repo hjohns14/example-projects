@@ -30,7 +30,6 @@ while not inputs:
         inputs = True
     except Exception as e:
         print(e)
-return case
 
 def case_1():
     print("Running case 1")
