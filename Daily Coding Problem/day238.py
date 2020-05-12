@@ -1,5 +1,7 @@
 import numpy
 
+''' Unfinished '''
+
 class Deck:
 	def __init__(self):
 		self.two = 2
