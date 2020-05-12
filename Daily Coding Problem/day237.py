@@ -1,4 +1,8 @@
 
+
+''' Unfinished'''
+
+
 class Node():
     def __init__(self, val):
         self.l = None
@@ -58,10 +62,9 @@ class Tree():
             print(str(node.v) + ' ')
             self._printTree(node.r)
 
-tree = Tree()
+'''tree = Tree()
 tree.add(3)
 tree.add(4)
 tree.add(0)
 tree.add(8)
-tree.add(2)
-tree._printTree()
+tree.add(2)'''
