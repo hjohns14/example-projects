@@ -5,6 +5,11 @@ from sklearn import preprocessing, svm
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
+
+''' This program downloads a dataset of google's stock prices from quandl using an API call
+    and uses linear regression and a Support Vector Machine to predict the future stock price (10 days).
+    The confidence is printed for each mehtod. '''
+
 quandl.ApiConfig.api_key = 'xghgkDWWtaWv3cMiAd_4'
 df = quandl.get('WIKI/GOOGL')
 
@@ -44,5 +49,5 @@ clf2.fit(X_train, y_train)
 
 svr_conf = clf2.score(X_test, y_test)
 confidence  = clf.score(X_test, y_test)
-print(confidence)
-print(svr_conf)
+print("Confidence -  Linear Regression: ", confidence)
+print("Confidence - SVM: ", svr_conf)
