@@ -2,35 +2,35 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+''' This project uses a modified Vogel's method to plot Inflow Performance Relationship
+using matplotlib. Currently the project is accurate for measurement taken at Pb < Pwf.
+Case 2 will determine the data taken at Pwf < Pb. '''
 
 
 
 
 
+inputs = False
+print("Input unknowns")
+while not inputs:
+    try:
+        p_avg = float(input("Average reservoir pressure(psi): "))
+        p_wf = float(input("Bottom hole pressure(psi): "))
+        q_o = float(input("Flow rate (STB/d): "))
+        p_b = float(input("Bubble point pressure(psi): "))
 
+        if p_wf > p_avg:
+            raise Exception("Bottom Hole pressure can not be higher than average reservoir pressure!")
 
-def get_data():
-    inputs = False
-    print("Input unknowns")
-    while not inputs:
-        try:
-            p_avg = float(input("Average reservoir pressure(psi): "))
-            p_wf = float(input("Bottom hole pressure(psi): "))
-            q_o = float(input("Flow rate (STB/d): "))
-            p_b = float(input("Bubble point pressure(psi): "))
+        if p_wf > p_b:
+            case = 1
+        else:
+            case = 2
 
-            if p_wf > p_avg:
-                raise Exception("Bottom Hole pressure can not be higher than average reservoir pressure!")
-
-            if p_wf > p_b:
-                case = 1
-            else:
-                case = 2
-
-            inputs = True
-        except Exception as e:
-            print(e)
-    return case
+        inputs = True
+    except Exception as e:
+        print(e)
+return case
 
 def case_1():
     print("Running case 1")
@@ -63,11 +63,8 @@ def case_1():
     plt.show()
 
 def case_2():
+    #Case 2 must be completed
     print("Running case 2!")
 
 
-case = get_data()
-if case == 1:
-    case_1()
-else:
-    case_2()
+case_1()
