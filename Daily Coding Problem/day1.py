@@ -16,7 +16,7 @@ def find_add(k):
 
 	return False
 
-find_add(k)
+print(find_add(k))
 
 ''' Well that was easy '''
 
@@ -34,6 +34,6 @@ def find_add_3(k, l):
 					return True
 	return False
 
-
+print(find_add_3(25, [10, 5, 10, 30, 45,11, 2]))
 
 ''' Second method '''
