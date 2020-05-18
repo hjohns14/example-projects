@@ -4,7 +4,7 @@ import random
 running = True
 while running:
     try:
-        min, max = int(input("Input the minimum and maximum numbers for the game. Minimum: ")), int(input("Maximum: "))
+        min, max = int(input("Input the minimum and maximum numbers for the game. \nMinimum: ")), int(input("Maximum: "))
         num = random.randint(min, max)
         #print(num)
     except Exception as e:
@@ -13,13 +13,14 @@ while running:
     correct = False
     while not correct:
         guess = int(input("What is your guess? "))
-        if guess == num:
-            print("Correct!")
-            correct = True
-        elif guess > num:
+        if guess > num:
             print("Guess lower!")
         elif guess < num:
             print("Guess higher!")
+        else: 
+            print("Correct!")
+            correct = True
+            
 
             
 
