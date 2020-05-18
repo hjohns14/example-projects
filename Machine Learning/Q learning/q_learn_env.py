@@ -6,6 +6,10 @@ import pickle
 from matplotlib import style
 import time
 
+
+'''This program creates a three blocks. The Player is blue and his goal is to get the Food block (green) while
+	avoiding the enemy block (red). This uses q-learning to accomplish this.'''
+
 style.use('ggplot')
 
 SIZE = 10
@@ -158,7 +162,7 @@ for episode in range(HM_EPISODES):
 
 			img = Image.fromarray(env, 'RGB')
 			img = img.resize((300, 300))
-			cv2.imshow("yeet", np.array(img))
+			cv2.imshow("Snapshot", np.array(img))
 			if reward == FOOD_REWARD  or reward == -ENEMY_PENALTY:
 				if cv2.waitKey(500) & 0xFF == ord("q"):
 					break

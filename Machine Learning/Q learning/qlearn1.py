@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 
 
 
+''' This program uses gym's built in mountain car enviromnemt to apply a q-learning algorithm.
+    Initially the car can not make it up the hill but by the end of the 25,000 training episodes it can.'''
+
 env = gym.make("MountainCar-v0")
 
 '''
