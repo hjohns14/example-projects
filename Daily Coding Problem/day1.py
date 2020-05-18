@@ -8,7 +8,6 @@ numbers = [10, 4, 7]
 def find_add(k):
 	l = len(numbers)
 	for i in range(l-1):
-		base = numbers[i]
 		for j in range(i+1, l):
 			if numbers[i] +numbers[j] == k:
 				return True
@@ -34,6 +33,9 @@ def find_add_3(k, l):
 					return True
 	return False
 
-print(find_add_3(25, [10, 5, 10, 30, 45,11, 2]))
+n = 25
+
+#Prints true if three numbers in this list add to 25
+print(find_add_3(n, [10, 5, 10, 30, 45,11, 2]))
 
 ''' Second method '''
