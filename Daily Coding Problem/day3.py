@@ -60,9 +60,12 @@ final_answer = []
 Node.serialize(new_root, final_answer)
 print(result)
 
+node = Node('root', Node('left', Node('left.left')), Node('right'))
+assert node.deserialize(serialize(node)).left.left.val == 'left.left'
+
 ## LOTS OF RECURSION ## LEARN IT, LOVE IT ###
 
-### FIRST ATTEMPT ### FAIL ##########
+# This was my first attempt and failure
 
 '''def serialize(root):
 	## TURN THE TREE INTO A STRING ##

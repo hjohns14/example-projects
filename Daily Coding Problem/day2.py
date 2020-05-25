@@ -6,7 +6,8 @@ If our input was [3, 2, 1], the expected output would be [2, 3, 6]. '''
 
 import numpy as np
 
-arg = [3, 2, 1]
+arg1 = [1, 2, 3, 4, 5]
+arg2 = [3, 2, 1]
 
 def  factorial(arg):
 	final = []
@@ -19,3 +20,7 @@ def  factorial(arg):
 		final.append(result)
 		#print(final)
 	return final
+
+
+print(factorial(arg1))
+print(factorial(arg2))
