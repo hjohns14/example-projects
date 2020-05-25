@@ -22,13 +22,10 @@ win = 23914
 prob = 111
 
 
-
-
-
 class Book():
 	def __init__(self, key):
 		self.id = "dhfaohufneklahfsiohfsd"
-		self.purpose = "To get this daily coding problem"
+		self.purpose = "To get this daily coding problem done"
 		self.key = key
 		self.options = []
 
@@ -64,7 +61,8 @@ class Book():
 
 
 
-book = Book(win)
+book = Book(prob)
+
 
 
 book.run()
