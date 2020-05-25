@@ -18,7 +18,6 @@ class Node():
         self.left = None
         self.right = None
         self.data = data
-        self.ut = 0
 
     def __str__(self):
         if self.left and self.right:
@@ -39,29 +38,23 @@ class Node():
             self.right= Node(val)
 
 
-    def count_unival(self):
-        #Function that iterates over a tree and counts the number of unival subtrees
+def count_unival(root):
+    #Function that iterates over a tree and counts the number of unival subtrees
+    if not root:
+        return 0
+    elif not root.left and not root.right:
+        return 1
+    elif not root.left and root.data == root.right.data:
+        return 1 + count_unival(root.right)
+    elif not root.right and root.data == root.left.data:
+        return 1 + count_unival(root.left)
 
-        # ASOF 5-25-20 Im close but not done
-        if not self.left and not self.right:
-            self.ut += 1        
-        elif self.data == self.left.data == self.right.data:
-            self.ut += 1
-            self.left.count_unival()
-            self.right.count_unival()
-
-        else:
-            try:
-                self.left.count_unival()
-                self.right.count_unival()
-            except AttributeError as e:
-                pass
-        print(self.ut)
-
-
-
-
-    
+    branch_count = count_unival(root.left) + count_unival(root.right)
+    if root.right.data == root.data and root.left.data == root.data:
+        parent_count = 1
+    else:
+        parent_count = 0
+    return branch_count + parent_count  
 
 
 # Creating the tree in the example
@@ -74,4 +67,6 @@ tree.right.left.insert(1, True)
 tree.right.left.insert(1, False)
 print(tree)
 
-tree.count_unival()
+assert count_unival(tree) == 5
+assert count_unival(tree.left) == 1
+assert count_unival(tree.right) == 4
