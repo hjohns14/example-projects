@@ -9,7 +9,6 @@ Good morning! Here's your coding interview problem for today.
 			You can assume that the messages are decodable. For example, '001' is not allowed.
 '''
 
-# ALRIGHTY THEN MATH
 
 code_dict =  {
 	1: 'a',  2: 'b', 3: 'c', 4: 'd', 5: 'e',
@@ -29,7 +28,7 @@ prob = 111
 class Book():
 	def __init__(self, key):
 		self.id = "dhfaohufneklahfsiohfsd"
-		self.purpose = "To get this daily coding problem done nigga"
+		self.purpose = "To get this daily coding problem"
 		self.key = key
 		self.options = []
 

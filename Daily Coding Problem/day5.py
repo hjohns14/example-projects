@@ -21,7 +21,6 @@ def cdr(f):
 
 
 
-print(type(car))
 
 l = cons(3, 5)
 print(car(l))

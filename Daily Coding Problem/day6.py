@@ -68,3 +68,4 @@ create_links(link_list, nodes)
 
 
 ## ASOF 7-10-19: Giving up on this one because python is screwey. COME BACK
+## Will be easier in C++

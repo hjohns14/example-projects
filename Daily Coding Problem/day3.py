@@ -52,16 +52,18 @@ root = 	Node('root',
 	   		Node('right',
 	   			Node('right.left'),
 	   			Node('right.right')))
+
 result = []
 Node.serialize(root, result)
-print(result)
+print(result, type(result))
 new_root = Node.deserialize(result)
 final_answer = []
 Node.serialize(new_root, final_answer)
-print(result)
+print(result, type(final_answer))
+
 
 node = Node('root', Node('left', Node('left.left')), Node('right'))
-assert node.deserialize(serialize(node)).left.left.val == 'left.left'
+
 
 ## LOTS OF RECURSION ## LEARN IT, LOVE IT ###
 
