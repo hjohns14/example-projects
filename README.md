@@ -1,6 +1,17 @@
 # example-projects
 Example projects to compliment resume
 
+!! My Senior Project work is in the Machine Learning folder along with other personal projects
+
+
+
+
+
+
+
+
+
+
 MIT License
 
 Copyright (c) 2020 Hunter Johns
