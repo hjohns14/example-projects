@@ -9,6 +9,9 @@ LEARNING_RATE = 0.027
 global m
 global thetas
 
+# Data Not included
+
+
 df = pd.read_csv("ex1data1.csv", header=None, names=["x", "y"]) # Giving the data headers with names x and y
 train_x, train_y = [np.array([df["x"]]), np.array([df["y"]])] # Assigning the columns to np.arrays
 train_x, train_y = np.transpose(train_x), np.transpose(train_y) # changing from a 1x97 to a 97x1 for consistency
