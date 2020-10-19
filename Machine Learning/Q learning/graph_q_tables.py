@@ -34,7 +34,7 @@ for i in range(0, 25001, 20):
 
 
 	if not i % 100:
-		print("Be patient nigga")
+		print("Be patient")
 
 	plt.savefig(f"data/q_graphs/{i}.png")
 	plt.clf()
