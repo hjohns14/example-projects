@@ -6,7 +6,9 @@ The purpose of the project was to attempt to create a Long-Short-Term Memory Neu
 During that time i learned how to use tensorflow and pytorch, not knowing which would be better for the project, and tested my NN only using a few of the datasets. I also learned to build ARIMA and SVM models for results comparison.
 
 !!!
-Unfortunately only 8 weeks into the project campus was shut down due to COVID-19 and all Senior projects were ended. At this stage my code work is very rough and may be difficult to read. **This is an initial implementation of the neural network and has not been optimized, analyzed, or had any work done past the initial stage of getting the NN to run proplerly and plot the data.** The LSTM model was running successfully, but most of the data was not ready and the results were poor compared to the ARIMA and SVM models.
+Unfortunately only 8 weeks into the project campus was shut down due to COVID-19 and all Senior projects were ended. At this stage my code work is very rough and may be difficult to read. 
+**This is an initial implementation of the neural network and has not been optimized, analyzed, or had any work done past the initial stage of getting the NN to run proplerly and plot the data.**
+The LSTM model was running successfully, but most of the data was not ready and the results were poor compared to the ARIMA and SVM models.
 !!!
 
 I chose to admit this file to my repository for potential employers or anyone who may find it useful. I used the Tensorflow Documentation and some code snipped from the "Time Series Forecasting" section. Again, the code is pretty rough and definately not polished or optimized.
